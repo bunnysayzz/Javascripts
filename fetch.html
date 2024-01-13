@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.8">
+  <title>News API Application</title>
+</head>
+<body>
+  <h1>News API Application</h1>
+  <div id="main"></div>
+  <script>
+    const element = document.getElementById("main");
+    fetch("https://newsapi.org/v2/everything?q=tesla&from=2023-12-12&sortBy=publishedAt&apiKey=YOUR_API_KEY")
+      .then((response) => response.json())
+      .then((data) => {
+        // Process the fetched data here
+        console.log(data);
+      })
+      .catch((error) => {
+        // Handle any errors that occurred during the fetch
+        console.log(error);
+      });
+  </script>
+</body>
+</html>
+
+
+//wheneever we use DOM and ctreate the element then it no response
+
+//async
+//avoid
+
+//for avoid must be async but always async but for async no avoid
