@@ -1,11 +1,10 @@
 async function greet() {
-    return "Adfar Rasheed";
-  }
-  
-  greet().then((res) => {
-    console.log(res);
-  });
+  return "Adfar Rasheed";
+}
 
-  //difference between await and
+async function displayGreeting() {
+  const res = await greet();
+  console.log(res);
+}
 
-  wait for and dont move forward if await do
+displayGreeting();
